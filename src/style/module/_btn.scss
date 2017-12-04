@@ -1,0 +1,12 @@
+.btn {
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	font: size 1.75rem;
+	text-transform: uppercase;
+	color: color(b-white);
+	background-color: color(b-black);
+	border: none;
+	&:hover, &:active, &:focus {
+		background-color: tint(color(b-black), 15%);
+	}
+}

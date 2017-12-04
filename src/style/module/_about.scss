@@ -4,18 +4,26 @@
 	& article {
 		position: absolute;
 		color: color(text);
-		z-index: 2;
+		z-index: 999999;
 		padding: 2rem;
 		background-color: color(b-white);
 		width: 100%;
-		top: 2rem;
+		& button {
+			display: block;
+			margin: 0 auto;
+			min-width: span(8);	
+		}
 	}
 }
 
-@media (min-width: map-get($breakpoints, b-xlarge)) {
+@media (min-width: map-get($breakpoints, b-large)) {
 	.about {
 		& article {
 			padding: span(1);
+			top: 2rem;
+			max-width: span(8);
+			left: 50%;
+			transform: translate(-50%, 0);
 		}
 	}
 }

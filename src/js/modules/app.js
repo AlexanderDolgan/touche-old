@@ -11,15 +11,15 @@ $(document).ready(function(){
 
 
 	$('.centerer').on('click', function() {
-		$('.about').fadeOut();
+		$('.about').slideUp();
 	});
 
 	$('.close-about').on('click', function() {
-		$('.about').fadeOut();
+		$('.about').slideUp();
 	});
-	
+
 	$('.about-btn').on('click', function() {
-		$('.about').fadeIn();
+		$('.about').slideDown();
 		$('.nav-wrapper').css('left', '-100%');
 	});
 
