@@ -19,7 +19,7 @@ $(document).ready(function(){
 	});
 
 	$('.about-btn').on('click', function() {
-		$('.about').slideDown();
+		$('.about').fadeIn();
 		$('.nav-wrapper').css('left', '-100%');
 	});
 

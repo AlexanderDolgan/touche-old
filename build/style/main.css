@@ -299,7 +299,7 @@ a {
   .about article {
     position: absolute;
     color: #0a0a0a;
-    z-index: 999999;
+    z-index: 2;
     padding: 2rem;
     background-color: white;
     width: 100%; }
