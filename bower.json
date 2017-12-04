@@ -33,6 +33,7 @@
   ],
   "private": true,
   "dependencies": {
-    "susy": "^3.0.1"
+    "susy": "^3.0.1",
+    "jquery": "^3.2.1"
   }
 }
