@@ -17,7 +17,7 @@ $(document).ready(function(){
 	$('.close-about').on('click', function() {
 		$('.about').fadeOut();
 	});
-
+	
 	$('.about-btn').on('click', function() {
 		$('.about').fadeIn();
 		$('.nav-wrapper').css('left', '-100%');
