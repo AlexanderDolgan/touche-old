@@ -1,0 +1,29 @@
+.site-wrapper {
+	@include container();
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+}
+
+.shade {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.75);
+}
+
+//Grid
+//------
+///@group grid
+///fluid container full width
+.container-fluid {
+	@include container();
+}
+
+//Grid
+//------
+///@group grid
+///fixed container
+.container {
+	@include container($container);
+}

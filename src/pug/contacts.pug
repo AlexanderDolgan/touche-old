@@ -1,0 +1,26 @@
+section.contacts
+	.wrapper
+		h1 Контакты
+		.left
+			form(action="index.html")
+				p
+					label(for="user-name") Имя
+					input(type="text", name="user-name")
+				p
+					label(for="user-email") e-mail
+					input(type="text", name="user-email")
+				p
+					label(for="user-message") Сообщение
+					input(type="textarea", name="user-message")
+				
+				button(type="submit") Отправить
+
+		.right
+			address
+				ul
+					li
+						a(href="#") Садовая-Черногрязская, 22, стр.1
+					li
+						a(href="tel:+74956216002") +7 495 621 60 02
+					li
+						a(href="mail:ojakhuri@mail.ru") ojakhuri@mail.ru

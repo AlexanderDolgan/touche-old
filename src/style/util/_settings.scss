@@ -1,0 +1,58 @@
+/// Media q breakpoints
+///------------
+///@group Settings
+$breakpoints: (
+	'b-small': 0,
+	'b-medium': 640px, 
+	'b-medium-tab': 767px,
+	'b-large': 960px,
+	'b-xlarge': 1280px,
+	'b-xxlarge': 1600px,
+	'b-small-only': 0 639px,
+	'b-medium-only': 960px 1279px,
+	'b-large-only':  1280px 1600px
+);
+
+$container: map-get($breakpoints, b-xlarge);
+$pad-max: 8rem;
+$pad-med: 4rem;
+$pad-small: 2rem;
+
+/// Основные настройки шрифтов
+///------------
+///@group Settings
+$typography: (
+	global-font-family: ('Roboto Condensed', sans-serif),
+	second-font-family: ('Roboto Condensed', sans-serif),
+	global-font-size: 8px,
+	body-font-size: 14px,
+	global-line-height: 1.714,
+	font-smooth: antialiased,
+	header-font-family: ('Roboto Condensed', sans-serif),
+	header-font-weight: 700,
+	paragraph-font-size: 1.75rem,
+	paragraph-line-height: 3rem,
+	paragraph-margin-top: 2rem
+);
+
+/// Цвета
+///------------
+///@group Settings
+$brand-colors: (
+	'primary': hsl(36, 37%, 45%),
+	'secondary': hsl(88, 44%, 51%),
+	'third': hsl(212, 72%, 59%),
+	'text': hsl(0, 0%, 4%),
+	'bej': hsl(50, 30%, 96%),
+	'success': hsl(88, 92%, 24%),
+	'warning': hsl(46, 94%, 54%),
+	'alert': hsl(0, 76%, 59%),
+	'light-gray': hsl(0, 1%, 61%), 
+	'medium-gray': hsl(0, 0%, 61%),
+	'dark-gray': hsl(0, 0%, 36%),
+	'b-black': hsl(0, 0%, 13%),
+	'dark-black': hsl(0, 0%, 12%),
+	'b-white': hsl(0, 0%, 100%)
+);
+
+$base-spacing: 1rem;

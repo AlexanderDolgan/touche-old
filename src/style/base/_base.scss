@@ -1,0 +1,98 @@
+html {
+	width: 100%;
+	height: 100%;
+	font-size: typo(global-font-size);
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: typo(global-font-family);
+	line-height: typo(global-line-height);
+	font-size: typo(paragraph-font-size);
+	-webkit-font-smoothing: typo(font-smooth);
+	color: color(text);
+	background-image: url('../images/interior.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: map-get($typography, header-font-family);
+	font-weight: map-get($typography, header-font-weight);
+	margin: 1rem 0;
+}
+
+h1 {
+	font-size: 3rem; 
+	line-height: 4rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+	line-height: 3.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+	line-height: 3.5rem;
+	color: color(medium-gray);
+}
+
+h4 {
+	font-size: 1.625rem;
+	line-height: 2.5rem;
+}
+
+h5, h6 {
+	font-size: 1.375rem;
+	line-height: 2.5rem;
+}
+
+// Paragraphs
+p {
+	margin: 0;
+	margin-top: typo(paragraph-margin-top);
+	line-height: typo(paragraph-line-height);
+}
+
+//list
+ul, ol {
+	// margin: typo(paragraph-margin-bottom) 0;
+	line-height: typo(paragraph-line-height);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+//links
+a {
+	text-decoration: none;
+	color: color(primary);
+	&:hover,
+	&:active,
+	&:focus {
+		color: shade(color(primary), 15%);
+		text-decoration: underline;
+	}
+}

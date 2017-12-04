@@ -1,0 +1,53 @@
+.contacts {
+	position: absolute;
+	bottom: 2rem;
+	width: 100%;
+	& address {
+		& ul {
+			& li {
+				display: block;
+				& a {
+					font-style: normal;
+					font-size: 1.75rem;
+					color: color(b-white);
+				}
+			}
+		}
+	}
+	& .social {
+		margin-top: 2rem;
+		& ul {
+			& li {
+				display: inline-block;
+				margin: 1rem;
+				& a {
+					display: block;
+					width: 3rem;
+					height: 3rem;
+					& img {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-large)) {
+	.contacts {
+		bottom: 5rem;
+		& address {
+			& ul {
+				& li {
+					margin-top: 1rem;
+					& a {
+						font-size: 2.25rem;
+					}
+				}
+			}
+		}
+		& .social {
+			margin-top: 3rem;
+		}
+	}
+}

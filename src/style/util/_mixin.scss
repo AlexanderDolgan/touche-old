@@ -1,0 +1,107 @@
+/// Clearfix
+///------------
+///@group layout
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: ' ';
+    display: table;
+  }
+}
+
+/// Container
+///------------
+///@group layout
+@mixin container(
+  $width: all,
+  $config: (),
+  $debug: false,
+  $min-width: map-get($breakpoints, b-xlarge)
+) {
+  $config: map-merge($susy, $config) !global;
+  $config: susy-settings($config);
+  $container-spread: map-get($config, 'container-spread');
+  $width: span($width $container-spread of $container-spread, $config);
+  
+  @include clearfix;
+  margin: 0 auto;
+  max-width: $width or 100%;
+
+  @if $debug {
+    background: susy-svg-grid($grid: $config) no-repeat scroll;
+  }
+}
+
+/// Media q breakpoints
+///------------
+///@group layout
+@mixin span(
+  $span,
+  $config: $susy
+) {
+  width: span($span, $config);
+  
+  @if index($span, 'last') {
+    float: right;
+    margin-right: 0; //if you want an explicit reset
+  } @else {
+    float: left;
+    margin-right: gutter();
+  }
+}
+
+/// Gallery
+///------------
+///@group layout
+@mixin gallery(
+  $span,
+  $config: $susy
+) {
+  $grid: susy-compile($span, $config);
+  $span: map-get($grid, 'span');
+  $column-count: length(map-get($grid, 'columns'));
+  $count: floor($column-count / $span);
+  $spread: map-get($grid, 'spread') + 2;
+  $container-spread: map-get($grid, 'container-spread') + 2;
+  $extra: ($container-spread - $spread) * 0.5;
+  $extra-push: su-call('su-gutter', $grid) * $extra;
+  
+  float: left;
+  margin-right: -100%;
+
+  @for $n from 1 through ($count) {
+    $nth: unquote('#{$count}n + #{$n}');
+    $location: $span * ($n - 1) + 1;    
+    
+    &:nth-child(#{$nth}) {
+      $width: susy-compile($span at $location, $grid);
+      width: su-call('su-span', $width);
+
+      @if ($location > 1) {
+        $wide: susy-compile('first' $location - 1 'wide', $grid);
+        clear: none;
+        margin-left: su-call('su-span', $wide) + $extra-push;
+      } @else {
+        clear: both;
+        margin-left: if($extra-push > 0, $extra-push, 0);
+      }
+    }
+  }
+}
+
+/// block mixin
+// change settings for a block of content
+///------------
+///@group layout
+@mixin susy-settings-block($config) {
+  // store the old settings
+  $global: $susy;
+  // apply the new settings
+  $susy: map-merge($susy, $config) !global;
+  
+  // allow nested styles, using new settings
+  @content;
+  
+  // return to the initial settings
+  $susy: $global !global;
+}

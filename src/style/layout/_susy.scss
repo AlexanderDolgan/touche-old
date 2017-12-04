@@ -1,0 +1,14 @@
+// @import "../../../bower_components/breakpoint/breakpoint/breakpoint";
+
+@import "../../../bower_components/susy/sass/susy";
+@import "../../../bower_components/susy/sass/plugins/svg-grid";
+
+// settings
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 0,
+  'svg-grid-colors': hsl(180, 50%, 80%),
+  'container-spread': 'narrow',
+  'span-spread': 'wider',
+);
+

@@ -1,0 +1,47 @@
+// Get Color
+// --------
+/// @example
+/// background-color: color(primary)
+/// get color from brand-colors map
+/// @group function
+@function color($key) {
+  @if map-has-key($brand-colors, $key) {
+    @return map-get($brand-colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $brand-colors.";
+  @return null;
+}
+
+// Get typography settings
+// --------
+/// @example
+/// font-family: font(global-font-family)
+/// get type settings from font map
+/// @group function
+@function typo($key) {
+  @if map-has-key($typography, $key) {
+    @return map-get($typography, $key);
+  }
+  @warn "Unknown `#{$key}` in $typography.";
+  @return null;
+} 
+
+// tint Color
+// --------
+/// Mix white with another color
+/// @example
+/// color: tint(color(primary,15%);
+/// @group function
+@function tint($color, $percent: $mix-percent-default){
+	@return mix(white, $color, $percent);
+}
+
+// shade Color
+// --------
+/// Mix black with another color
+/// @example
+/// color: shade(color(primary,15%);
+/// @group function
+@function shade($color, $percent: $mix-percent-default){
+	@return mix(black, $color, $percent);
+}

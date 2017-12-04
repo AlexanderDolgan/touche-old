@@ -1,0 +1,27 @@
+.centerer {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 7rem);
+	text-align: center;
+	& .logo img {
+		position: absolute;
+		max-width: span(8);
+		max-height: 50vh;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+
+@media (min-width: map-get($breakpoints, b-large)){
+	.centerer {
+		height: calc(100% - 9rem);
+		text-align: center;
+		& .logo img {
+			max-width: span(4);
+			max-height: 50vh;
+			top: 40%;
+		}
+	}
+}
