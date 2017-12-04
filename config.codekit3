@@ -2116,6 +2116,27 @@
 		"opt": 1,
 		"q": 80
 		},
+	"\/src\/images\/menu\/Bar_List_Touche_summer 05 2017.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/images\/menu\/Bar_List_Touche_summer 05 2017.pdf",
+		"oF": 0
+		},
+	"\/src\/images\/menu\/ToucheMenu_AUTUMNnovember 11 2017.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/images\/menu\/ToucheMenu_AUTUMNnovember 11 2017.pdf",
+		"oF": 0
+		},
+	"\/src\/images\/menu\/WineList_Touche2017_winter_final 10 2017.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/images\/menu\/WineList_Touche2017_winter_final 10 2017.pdf",
+		"oF": 0
+		},
 	"\/src\/index.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -2144,6 +2165,15 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/src\/pug\/about.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/build\/pug\/about.html",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/src\/pug\/contacts.pug": {
 		"cB": 0,
@@ -2278,6 +2308,19 @@
 		"ma": 1,
 		"oA": 0,
 		"oAP": "\/build\/style\/main.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/src\/style\/module\/_about.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/build\/style\/module\/_about.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
