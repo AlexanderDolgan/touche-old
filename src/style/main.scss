@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic-ext');
 
+@import '../../bower_components/photoswipe/src/css/main.scss';
+
+@import '../../bower_components/photoswipe/src/css/default-skin/default-skin.scss';
+
 @import 'util/settings';
 @import 'util/function';
 @import 'util/mixin';
@@ -8,3 +12,4 @@
 @import 'base/base';
 @import 'layout/index';
 @import 'module/index';
+

@@ -25,7 +25,7 @@
 			left: -100%;
 			z-index: 999;
 			background-color: rgba(0,0,0,.92);
-			transition: left .3s ease-in-out;
+			transition: left .6s ease-out;
 			& .close-btn {
 				position: absolute;
 				top: 3rem;
@@ -52,7 +52,7 @@
 						&:hover, &:active, &:focus {
 							background-color: rgba(255,255,255,.3);
 							text-decoration: none;
-							color: color(primari);
+							color: color(primary);
 						}
 					}
 				}
@@ -78,6 +78,42 @@
 		}
 	}
 }
+
+.active li{
+	animation-name: fade-left;
+	animation-duration: .6s;
+	animation-timing-function: ease-out;
+	animation-direction: normal;
+	animation-fill-mode: both;
+}
+
+.active li:nth-child(1) {
+	animation-delay: .1s;
+}
+.active li:nth-child(2) {
+	animation-delay: .2s;
+}
+.active li:nth-child(3) {
+	animation-delay: .3s;
+}
+.active li:nth-child(4) {
+	animation-delay: .4s;
+}
+.active li:nth-child(5) {
+	animation-delay: .5s;
+}
+
+@keyframes fade-left {
+	0% {
+		margin-left: -150px;
+		opacity: 0;
+	}
+	100% {
+		margin-left: 0;
+		opacity: 1;
+	}
+}
+
 
 @media (min-width: map-get($breakpoints, b-large)) {
 	#site-header-mob {

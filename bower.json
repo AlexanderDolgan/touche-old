@@ -34,6 +34,7 @@
   "private": true,
   "dependencies": {
     "susy": "^3.0.1",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "photoswipe": "^4.1.2"
   }
 }
