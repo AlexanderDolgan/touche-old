@@ -1,6 +1,7 @@
 #site-header-mob {
 	position: relative;
-	background-color: white;
+	background-color: color(b-white);
+	z-index: 1;
 	& .nav {
 		text-align: center;
 		padding: 2rem;
